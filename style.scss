@@ -38,6 +38,10 @@ $radius:17px;
 body{
     display: $joylashtir;
     gap:$ga;
+    align-items: $markaz;
+    justify-content: $markaz;
+    height: 100vh;
+    margin: $margin;
 }
 .twitter{
     @include marker();
@@ -73,6 +77,9 @@ b{
     body{
         display:$joylashtir;
         flex-direction: $flex;
+        align-items: $markaz;
+        justify-content: $markaz;
+        height: 220vh;
     }
     @mixin media{
         width: 53vh;
