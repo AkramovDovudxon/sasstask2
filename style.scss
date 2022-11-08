@@ -1,0 +1,96 @@
+$margin:0px;
+$height:64vh;
+$joylashtir:flex;
+$markaz:center;
+$back_color:black;
+$width:47vh;
+$color:white;
+$orqa_fon: rgb(234 0 156 / 99%);;
+$content:flex-start;
+$flex:column;
+$eni:36vh;
+$gap:30px;
+$size:25px;
+$ga:40px;
+$border:1px solid;
+$radius:17px;
+
+@mixin button {
+    background-color: $back_color;
+    color: $color;
+    width: 40vh;
+    height: 5vh;
+    font-size: 15px;
+    border-radius: $radius;
+}
+
+@mixin marker{
+    width: $width;
+    height: $height;
+    border: $border;
+    display: $joylashtir;
+    flex-direction: $flex;
+    align-items: $markaz;
+    justify-content: $markaz;
+    gap: $gap;
+}
+
+body{
+    display: $joylashtir;
+    gap:$ga;
+}
+.twitter{
+    @include marker();
+}
+.youtube{
+    @include marker();
+}
+.insta{
+    @include marker();
+    background-color:$orqa_fon;
+    color: $color;
+}
+p{
+    margin: $margin;
+    width: $eni;
+}
+b{
+    font-size: $size;
+}
+.but1{
+    @include button();
+}
+.but2{
+    @include button();
+    background-color:$color;
+    color: $orqa_fon;
+    border: $border;
+}
+.but3{
+    @include button();
+}
+@media (max-width: 768px) and (min-width: 320px) { /* telefon uchun  */
+    body{
+        display:$joylashtir;
+        flex-direction: $flex;
+    }
+    @mixin media{
+        width: 53vh;
+        height: 78vh;
+        border: 1px solid;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
+    }
+    .twitter{
+        @include media();
+    }
+    .youtube{
+        @include media();
+    }
+    .insta{
+        @include media();
+    }
+}
